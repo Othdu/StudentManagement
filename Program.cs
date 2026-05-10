@@ -1,4 +1,7 @@
-﻿using EFCoreDemo;
+﻿//testing
+
+
+using EFCoreDemo;
 using Microsoft.EntityFrameworkCore;
 
 using (var db = new AppDbContext())
