@@ -1,5 +1,0 @@
-C:\Users\mohmu\visual\repos\EFCoreDemo\EFCoreDemo\obj\Debug\net8.0\EFCoreDemo.csproj.AssemblyReference.cache
-C:\Users\mohmu\visual\repos\EFCoreDemo\EFCoreDemo\obj\Debug\net8.0\EFCoreDemo.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mohmu\visual\repos\EFCoreDemo\EFCoreDemo\obj\Debug\net8.0\EFCoreDemo.AssemblyInfoInputs.cache
-C:\Users\mohmu\visual\repos\EFCoreDemo\EFCoreDemo\obj\Debug\net8.0\EFCoreDemo.AssemblyInfo.cs
-C:\Users\mohmu\visual\repos\EFCoreDemo\EFCoreDemo\obj\Debug\net8.0\EFCoreDemo.csproj.CoreCompileInputs.cache
