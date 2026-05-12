@@ -1,4 +1,9 @@
 .vs/
 bin/
 obj/
+<<<<<<< HEAD
 *.user
+*.suo
+=======
+*.user
+>>>>>>> origin/main
