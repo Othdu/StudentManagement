@@ -3,28 +3,21 @@ using Microsoft.EntityFrameworkCore;
 
 using (var db = new AppDbContext())
 {
-    //filter
-    var highGrade = db.Students
-        .Where(s => s.Grade > 90)
+    Console.WriteLine("=== Eager Loading ===");
+    var students = db.Students
+        .Include(s => s.Courses)
+        .Where(s => s.Courses.Any())
         .ToList();
 
-    Console.WriteLine("Grade >  90:");
-    foreach(var s in highGrade)
-        Console.WriteLine($"{s.Name}-{s.Grade}");
+    foreach(var s in students)
+    {
+        Console.WriteLine($"{s.Name}");
+        foreach(var c in s.Courses)
+            Console.WriteLine($" -> {c.CourseName}");
+    }
 
-    //sort
-    var ordered = db.Students
-        .OrderByDescending(s => s.Grade)
-        .ToList();
-
-    Console.WriteLine("\nAll student sorted:");
-    foreach(var s in ordered)
-    Console.WriteLine($"{s.Name}-{s.Grade}");
-
-    //aggregate
-    int total =db.Students.Count();
-    double avg = db.Students.Average(s => s.Grade);
-    Console.WriteLine($"\nTotal:{total} | Average grade  : {avg:F1}");
-
+    Console.WriteLine("\n === without include ===");
+    var student =db.Students.FirstOrDefault();
+    Console.WriteLine($"{student.Name} Courses: {student.Courses?.Count??0}");
 }
 Console.ReadLine();
