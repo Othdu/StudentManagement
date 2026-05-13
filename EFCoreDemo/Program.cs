@@ -49,6 +49,8 @@ using (var db = new AppDbContext())
         .Include(p => p.Category)
         .Where(p => p.Quantity < 20)
         .ToList();
+    foreach (var p in lowStock)
+        Console.WriteLine($"  {p.Name} - only {p.Quantity} left");
 
     Console.WriteLine("\n ==== Value per Category ====");
     var grouped = db.Products
